@@ -1,5 +1,6 @@
 import SocialLinks from "../components/SocialLinks";
 import Image from "next/image";
+import profilePic from '../public/pexels-laura-tancredi-7083927.jpg';
 
 export default function AboutMe() {
     return (
@@ -8,7 +9,7 @@ export default function AboutMe() {
             <div>
                 <div className="float-left w-40 h-60 mr-4 relative shadow-2xl rounded-lg overflow-hidden">
                     <Image
-                        src='/../public/pexels-laura-tancredi-7083927.jpg'
+                        src={profilePic}
                         alt="Picture of me"
                         fill={true}
                     />
