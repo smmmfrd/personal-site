@@ -1,6 +1,8 @@
-import SocialLinks from "../components/SocialLinks";
 import Image from "next/image";
 import profilePic from '../public/pexels-laura-tancredi-7083927.jpg';
+
+import SocialLinks from "../components/SocialLinks";
+import Project from "../components/Project";
 
 export default function Home() {
   return (
@@ -8,6 +10,36 @@ export default function Home() {
       <main className="lg:max-w-5xl w-11/12 mx-auto flex flex-col">
         <AboutMe />
         <h2 className="bg-blurredBg w-min p-4 text-6xl rounded-t-xl">Projects</h2>
+        <div className="grid lg:grid-cols-2 grid-cols-1">
+            <Project
+              projectName={"Rookie Drive"}
+              projectDescription={"A clone of Google Drive, but only with document types typically made by people learning how to code. Users can sign in and create, update, or delete their own documents, all handled through Firebase."}
+              technologies={["react", "firebase", "webpack"]}
+              githubLink={"#"}
+              siteLink={"#"}
+            />
+            <Project
+              projectName={"Where's Waldo App"}
+              projectDescription={"A Where’s Waldo clone, but is functionally a quiz app without the correct answers on the client, done through checking attempts to a Firebase hosted database."}
+              technologies={["react", "firebase", "webpack"]}
+              githubLink={"#"}
+              siteLink={"#"}
+            />
+            <Project
+              projectName={"Battleship"}
+              projectDescription={"Seeing React’s overall architecture reflected exactly how I like to make games, so making a game in React happened naturally."}
+              technologies={["react", "tailwind", "react-router", "vite"]}
+              githubLink={"#"}
+              siteLink={"#"}
+            />
+            <Project
+              projectName={"This Portfolio"}
+              projectDescription={"This portfolio itself!"}
+              technologies={["react", "tailwind", "next"]}
+              githubLink={"#"}
+              siteLink={"#"}
+            />
+          </div>
       </main>
     </>
   );
