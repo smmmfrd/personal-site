@@ -49,11 +49,11 @@ export default function Project({ projectName, projectDescription, technologies,
                         </div>
                         <div className="w-max flex-none
                             flex flex-col justify-start items-end gap-2">
-                            <a className="p-1 font-semibold bg-black rounded
+                            <a className="pl-2 p-1 font-semibold bg-black rounded
                                 flex cursor-pointer" href={githubLink}>
                                 To Github Repo <BsArrowRightShort className="text-2xl" />
                             </a>
-                            <a className="p-1 font-semibold bg-black rounded
+                            <a className="pl-2 p-1 font-semibold bg-black rounded
                                 flex cursor-pointer" href={siteLink}>
                                 To Live Site <BsArrowRightShort className="inline-block align-middle text-2xl" />
                             </a>
