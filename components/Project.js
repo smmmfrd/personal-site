@@ -32,13 +32,17 @@ export default function Project({ projectName, projectDescription, technologies,
     });
     
     return (
-        <article className="bg-blurredBg drop-shadow-xl rounded-lg
-            py-4 px-6 lg:mx-3 my-4 flex flex-col gap-4">
+        <article className="bg-blurredBg drop-shadow-xl rounded-lg select-none
+            py-4 px-6 lg:mx-3 my-4 flex flex-col gap-4 cursor-pointer
+            pointer-events-auto group transition ease-out hover:bg-foggedBg active:bg-foggedBg">
             {/* TODO - Image Carousel */}
             <div className="flex-none w-full lg:h-40 h-52 bg-white m-auto" />
             <div className="flex-auto p-4
                 flex flex-col justify-between gap-4">
-                <h3 className="flex-none text-3xl">{projectName}</h3>
+                <h3 className="flex-none text-3xl group-hover:underline">
+                    {projectName} 
+                    <span className="text-4xl">&rarr;</span>
+                </h3>
                 <p>{projectDescription}</p>
                 <div className="bg-blurredBg py-2 px-4 rounded-lg">
                     <h4 className="text-2xl mb-2">Technologies</h4>
