@@ -21,7 +21,7 @@ export default function Home() {
           />
           <Project
             projectName={"Where's Waldo App"}
-            projectDescription={"A Where’s Waldo clone, but is functionally a quiz app without the correct answers on the client, done through checking attempts to a Firebase hosted database."}
+            projectDescription={"A Where’s Waldo clone, but functionally is a quiz app without the correct answers stored on the client, done through checking attempts to a Firebase hosted database."}
             technologies={["react", "firebase", "webpack"]}
             githubLink={"#"}
             siteLink={"#"}
@@ -34,8 +34,8 @@ export default function Home() {
             siteLink={"#"}
           />
           <Project
-            projectName={"This Portfolio"}
-            projectDescription={"This portfolio itself!"}
+            projectName={"This Site"}
+            projectDescription={"This site itself, made in nextjs and published through netlify."}
             technologies={["react", "tailwind", "next"]}
             githubLink={"#"}
             siteLink={"#"}

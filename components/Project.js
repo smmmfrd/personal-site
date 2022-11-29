@@ -26,8 +26,8 @@ export default function Project({ projectName, projectDescription, technologies,
     }
 
     const techElements = technologies.map(tech => {
-        return <div className="px-1 bg-black flex-none text-lg
-            flex items-center gap-1 rounded-sm" key={tech}>
+        return <div className="px-1 bg-black flex-none text-lg border-2 rounded-sm 
+            flex items-center gap-1" key={tech}>
             {findElement(tech)} {tech}</div>
     });
     
@@ -36,24 +36,24 @@ export default function Project({ projectName, projectDescription, technologies,
             py-4 px-6 lg:mx-3 my-4 flex flex-col gap-4">
             {/* TODO - Image Carousel */}
             <div className="flex-none w-full lg:h-40 h-52 bg-white m-auto" />
-            <h3 className="flex-none text-3xl">{projectName}</h3>
             <div className="flex-auto p-4
                 flex flex-col justify-between gap-4">
+                <h3 className="flex-none text-3xl">{projectName}</h3>
                 <p>{projectDescription}</p>
-                <div className="bg-blurredBg p-2 rounded-lg">
-                    <h4 className="text-xl">Technologies</h4>
-                    <div className="flex">
+                <div className="bg-blurredBg py-2 px-4 rounded-lg">
+                    <h4 className="text-2xl mb-2">Technologies</h4>
+                    <div className="flex gap-4">
                         <div className="w-full
                             flex flex-wrap content-start items-start gap-0.5">
                             {techElements}
                         </div>
                         <div className="w-max flex-none
                             flex flex-col justify-start items-end gap-2">
-                            <a className="pl-2 p-1 font-semibold bg-black rounded
+                            <a className="pl-2 p-1 font-semibold bg-black rounded text-right
                                 flex cursor-pointer" href={githubLink}>
-                                To Github Repo <BsArrowRightShort className="text-2xl" />
+                                To Github Repo <BsArrowRightShort className="inline-block align-middle text-2xl" />
                             </a>
-                            <a className="pl-2 p-1 font-semibold bg-black rounded
+                            <a className="pl-2 p-1 font-semibold bg-black rounded text-right
                                 flex cursor-pointer" href={siteLink}>
                                 To Live Site <BsArrowRightShort className="inline-block align-middle text-2xl" />
                             </a>
