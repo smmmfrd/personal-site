@@ -1,11 +1,17 @@
 import { BsArrowRightShort } from "react-icons/bs";
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandFirebase } from "react-icons/tb";
-import { SiReactrouter, SiWebpack, SiTailwindcss, SiVite, SiNextdotjs } from "react-icons/si"
+import { SiReactrouter, SiWebpack, SiTailwindcss, SiVite, SiNextdotjs } from "react-icons/si";
+import { useRouter } from "next/router";
 
-export default function Project({ projectName, projectDescription, technologies, githubLink, siteLink }) {
+
+
+export default function Project({ projectName, projectDescription, technologies, href, githubLink, siteLink }) {
+
+    const router = useRouter();
+
     function findElement(techName) {
-        switch (techName){
+        switch (techName) {
             case "react":
                 return <RiReactjsLine />;
             case "firebase":
@@ -30,17 +36,18 @@ export default function Project({ projectName, projectDescription, technologies,
             flex items-center gap-1" key={tech}>
             {findElement(tech)} {tech}</div>
     });
-    
+
     return (
         <article className="bg-blurredBg drop-shadow-xl rounded-lg select-none
             py-4 px-6 lg:mx-3 my-4 flex flex-col gap-4 cursor-pointer
-            pointer-events-auto group transition ease-out hover:bg-foggedBg active:bg-foggedBg">
+            pointer-events-auto group transition ease-out hover:bg-foggedBg active:bg-foggedBg"
+            onClick={() => router.push(`/projects/${href}`)}>
             {/* TODO - Image Carousel */}
             <div className="flex-none w-full lg:h-40 h-52 bg-white m-auto" />
             <div className="flex-auto p-4
                 flex flex-col justify-between gap-4">
                 <h3 className="flex-none text-3xl group-hover:underline">
-                    {projectName} 
+                    {projectName}
                     <span className="text-4xl">&rarr;</span>
                 </h3>
                 <p>{projectDescription}</p>
