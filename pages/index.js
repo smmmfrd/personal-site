@@ -20,23 +20,26 @@ export default function Home() {
           siteLink={"#"}
         />
         <Project
-          projectName={"Where's Waldo App"}
-          projectDescription={"A Where’s Waldo clone, but functionally is a quiz app without the correct answers stored on the client, done through checking attempts to a Firebase hosted database."}
-          technologies={["react", "firebase", "webpack"]}
-          githubLink={"#"}
-          siteLink={"#"}
-        />
-        <Project
           projectName={"Battleship"}
           projectDescription={"Seeing React’s overall architecture reflected exactly how I like to make games, so making a game in React happened naturally."}
           technologies={["react", "tailwind", "react-router", "vite"]}
+          href={'battleship'}
           githubLink={"#"}
           siteLink={"#"}
         />
         <Project
-          projectName={"This Site"}
-          projectDescription={"This site itself, made in nextjs and published through netlify."}
+          projectName={"Personal Site"}
+          projectDescription={"This site itself, made in Next.js and published through Netlify."}
           technologies={["react", "tailwind", "next"]}
+          href={'personal-site'}
+          githubLink={"#"}
+          siteLink={"#"}
+        />
+        <Project
+          projectName={"Where's Waldo App"}
+          projectDescription={"A Where’s Waldo clone, but functionally is a quiz app without the correct answers stored on the client, done through checking attempts to a Firebase hosted database."}
+          technologies={["react", "firebase", "webpack"]}
+          href={'wheres-waldo'}
           githubLink={"#"}
           siteLink={"#"}
         />

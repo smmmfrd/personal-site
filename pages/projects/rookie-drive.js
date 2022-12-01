@@ -1,4 +1,3 @@
-
 export default function RookieDrive() {
     return (
         <main className="lg:max-w-5xl w-5/6 my-4 mx-auto flex flex-col gap-4">
@@ -21,8 +20,6 @@ export default function RookieDrive() {
                     </p>
                 </section>
             </div>
-            <h2 className="text-2xl">Similar Projects</h2>
-            
         </main>
     )
 }
