@@ -3,10 +3,10 @@ import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandFirebase } from "react-icons/tb";
 import { SiReactrouter, SiWebpack, SiTailwindcss, SiVite, SiNextdotjs } from "react-icons/si";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 
-
-export default function Project({ projectName, projectDescription, technologies, href, githubLink, siteLink }) {
+export default function Project({ projectName, projectDescription, technologies, href, githubLink, siteLink, img }) {
 
     const router = useRouter();
 
@@ -37,24 +37,30 @@ export default function Project({ projectName, projectDescription, technologies,
             {findElement(tech)} {tech}</div>
     });
 
-
     return (
         <article className="bg-blurredBg drop-shadow-xl rounded-lg
             py-2 px-3 lg:mx-3 my-4 flex flex-col">
             <div className="flex-auto py-2
                 flex flex-col justify-between gap-4">
-                <header className="cursor-pointer group bg-blurredBg pt-2 p-4 rounded-lg flex flex-col gap-2 my-auto"
+                <header className="cursor-pointer group bg-blurredBg pt-2 p-4 rounded-lg flex flex-col gap-2 my-auto relative"
                     onClick={() => router.push(`/projects/${href}`)}>
-                    <div className="flex-none w-full lg:h-40 h-52 bg-white m-auto" />
-                    <h3 className="flex-none text-5xl text-center group-hover:underline">
-                        {projectName}
-                        <span className="text-4xl invisible group-hover:visible">&rarr;</span>
-                    </h3>
-                    <p className="px-4">
-                        {projectDescription}
-                        <span className="text-neutral-300 inline-block lg:block ml-2 lg:m-0"> Click to here learn more...
-                        </span>
-                    </p>
+                    <Image 
+                        className="mx-auto rounded-lg"
+                        src={img}
+                        width='480'
+                        height='288'
+                    />
+                    <figcaption>
+                        <h3 className="flex-none text-5xl text-center group-hover:underline">
+                            {projectName}
+                            <span className="text-4xl invisible group-hover:visible">&rarr;</span>
+                        </h3>
+                        <p className="px-4">
+                            {projectDescription}
+                            <span className="text-neutral-300 inline-block lg:block ml-2 lg:m-0"> Click to here learn more...
+                            </span>
+                        </p>
+                    </figcaption>
                 </header>
                 <div className="bg-blurredBg py-2 px-4 rounded-lg">
                     <h4 className="text-2xl mb-2">Technologies</h4>

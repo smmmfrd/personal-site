@@ -1,8 +1,13 @@
 import Image from "next/image";
-import profilePic from '../public/pic-of-me-cropped.jpg';
 
 import SocialLinks from "../components/SocialLinks";
 import Project from "../components/Project";
+
+import profilePic from '../public/pic-of-me-cropped.jpg';
+import rookieDrivePic from '../public/project_pics/rookie_drive_main.png';
+import battleShipPic from '../public/project_pics/battleship_game-end.png';
+
+import wheresWaldoPic from '../public/project_pics/wheres_waldo_char-screen.png';
 
 export default function Home() {
   return (
@@ -18,6 +23,7 @@ export default function Home() {
           href={'rookie-drive'}
           githubLink={"https://github.com/smmmfrd/rookie-drive"}
           siteLink={"https://aesthetic-crisp-943a41.netlify.app/"}
+          img={rookieDrivePic}
         />
         <Project
           projectName={"Battleship"}
@@ -26,6 +32,7 @@ export default function Home() {
           href={'battleship'}
           githubLink={"https://github.com/smmmfrd/battleship-react"}
           siteLink={"https://velvety-moxie-6a1467.netlify.app/"}
+          img={battleShipPic}
         />
         <Project
           projectName={"Personal Site"}
@@ -34,6 +41,7 @@ export default function Home() {
           href={'personal-site'}
           githubLink={"https://github.com/smmmfrd/personal-site"}
           siteLink={"#"}
+          img={''}
         />
         <Project
           projectName={"Where's Waldo App"}
@@ -42,6 +50,7 @@ export default function Home() {
           href={'wheres-waldo'}
           githubLink={"https://github.com/smmmfrd/wheres-waldo-app"}
           siteLink={"https://willowy-cascaron-acaae3.netlify.app/"}
+          img={ wheresWaldoPic}
         />
       </div>
     </main>
