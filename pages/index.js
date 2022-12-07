@@ -24,15 +24,17 @@ export default function Home() {
           githubLink={"https://github.com/smmmfrd/rookie-drive"}
           siteLink={"https://aesthetic-crisp-943a41.netlify.app/"}
           img={rookieDrivePic}
+          altText={'The landing page of my Rookie Drive project, with example documents.'}
         />
         <Project
           projectName={"Battleship"}
-          projectDescription={"Seeing React’s overall architecture reflected exactly how I like to make games, so making a game in React happened naturally."}
+          projectDescription={"Seeing React's overall architecture reflected exactly how I like to make games, so making a game in React happened naturally."}
           technologies={["react", "tailwind", "react-router", "vite"]}
           href={'battleship'}
           githubLink={"https://github.com/smmmfrd/battleship-react"}
           siteLink={"https://velvety-moxie-6a1467.netlify.app/"}
           img={battleShipPic}
+          altText={'The end screen of a game of Battleship in my project.'}
         />
         <Project
           projectName={"Personal Site"}
@@ -45,12 +47,13 @@ export default function Home() {
         />
         <Project
           projectName={"Where's Waldo App"}
-          projectDescription={"A Where’s Waldo clone, but functionally is a quiz app without the correct answers stored on the client, done through checking attempts to a Firebase hosted database."}
+          projectDescription={"A Where's Waldo clone, but functionally is a quiz app without the correct answers stored on the client, done through checking attempts to a Firebase hosted database."}
           technologies={["react", "firebase", "webpack"]}
           href={'wheres-waldo'}
           githubLink={"https://github.com/smmmfrd/wheres-waldo-app"}
           siteLink={"https://willowy-cascaron-acaae3.netlify.app/"}
-          img={ wheresWaldoPic}
+          img={wheresWaldoPic}
+          altText={'The beginning screen of a game of Where\'s Waldo in my project'}
         />
       </div>
     </main>

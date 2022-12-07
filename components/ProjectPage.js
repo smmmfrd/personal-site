@@ -27,12 +27,13 @@ export function Section({ title, children }) {
     )
 }
 
-export function ProjectImage({ img }) {
+export function ProjectImage({ img, altText }) {
     return (
         <div className="py-2">
             <Image
                 className="rounded-lg mx-auto"
                 src={img}
+                alt={altText}
                 width='480'
                 height='288'
             />

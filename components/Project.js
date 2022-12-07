@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 
-export default function Project({ projectName, projectDescription, technologies, href, githubLink, siteLink, img }) {
+export default function Project({ projectName, projectDescription, technologies, href, githubLink, siteLink, img, altText }) {
 
     const router = useRouter();
 
@@ -47,6 +47,7 @@ export default function Project({ projectName, projectDescription, technologies,
                     <Image
                         className="mx-auto rounded-lg"
                         src={img}
+                        alt={altText}
                         width='480'
                         height='288'
                     />

@@ -12,7 +12,10 @@ export default function Battleship() {
             />
             <ProjectPage.Section title={'Story'}>
                 <p>The Odin Project has its students make Battleship in plain Javascript as a learning project, but I kept thinking about how I could do it better once I learned more and more. So I redid it in React, implementing every improvement and additions that were stuck in my head for weeks.</p>
-                <ProjectPage.ProjectImage img={battlePlayer} />
+                <ProjectPage.ProjectImage
+                    img={battlePlayer}
+                    altText={'A player board being built.'}
+                />
                 <p>These improvements are things like utilizing React's structure to make the project's layout easier to understand, improvements to AI's ship placing, Tailwind making the project not look horrific, and different board sizes and AI difficulties.</p>
             </ProjectPage.Section>
             <ProjectPage.Section title={'Tech Used & Why'}>
@@ -21,7 +24,10 @@ export default function Battleship() {
             </ProjectPage.Section>
             <ProjectPage.Section title={'Problems'}>
                 <p>The Enemy Ship Placements, figuring out an algorithm to place each ship correctly was something I had never considered before doing this project, and was my favorite part once I figured my own way to do it, which is not the best, but it's mine.</p>
-                <ProjectPage.ProjectImage img={battleEnd} />
+                <ProjectPage.ProjectImage
+                    img={battleEnd}
+                    altText={'The end screen of a game.'}
+                />
                 <p>The Player Ship Placements is a wholly different beast. Displaying the current ship under the cursor is not difficult, but showing when the ship's length and responsively showing when it is not correct took some elbow grease. Since I decided that rotating your ship is done on a keypress, much later I realized it had to update the validity of your ship's placement as well, and was a difficult challenge to fix.</p>
                 <p>Someone testing the game mentioned they wanted to see their ships in a more detailed way. Displaying ships themselves is a hard task in the browser, and in my first implementation I had a single div crossing over gap spaces, which is much more difficult to do than just marking certain grid squares like how my current implementation does. Ironically, the first implementation is superior, because that div can just be given an image, and I will likely have to implement that again in the future.</p>
             </ProjectPage.Section>
