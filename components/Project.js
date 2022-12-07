@@ -44,7 +44,7 @@ export default function Project({ projectName, projectDescription, technologies,
                 flex flex-col justify-between gap-4">
                 <header className="cursor-pointer group bg-blurredBg pt-2 p-4 rounded-lg flex flex-col gap-2 my-auto relative"
                     onClick={() => router.push(`/projects/${href}`)}>
-                    <Image 
+                    <Image
                         className="mx-auto rounded-lg"
                         src={img}
                         width='480'

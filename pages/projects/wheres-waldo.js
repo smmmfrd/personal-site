@@ -1,5 +1,8 @@
 import * as ProjectPage from "../../components/ProjectPage";
 
+import waldoMain from "../../public/project_pics/wheres_waldo_main.png"
+import waldoChars from "../../public/project_pics/wheres_waldo_char-screen.png"
+
 export default function WheresWaldo() {
     return (
         <ProjectPage.Main>
@@ -9,10 +12,12 @@ export default function WheresWaldo() {
             />
             <ProjectPage.Section title={'Story'}>
                 <p>An assignment for The Odin Project, but I realized where it could be improved, by not storing the correct answer in the client we were creating a much improved quiz app.</p>
+                <ProjectPage.ProjectImage img={waldoMain} />
                 <p>The “quiz” itself is actually a Where's Waldo clone, where the player has to find specific characters in the images. Time is kept between starting and ending, and posted to a leaderboard, I have not implemented a leaderboard just yet.</p>
             </ProjectPage.Section>
             <ProjectPage.Section title={'Problems'}>
                 <p>Modals are a pain when first starting, but this project showed me how far I've come. When someone mentioned to me they wanted to see what characters they were looking for before starting and checking them at any time while playing, I was able to quickly implement a modal that displayed the characters.</p>
+                <ProjectPage.ProjectImage img={waldoChars} />
             </ProjectPage.Section>
             <ProjectPage.Section title={'Future Plans'}>
                 <p>Implementing a leaderboard is a deliverable for the assignment, and I am working on it right now. Originally I wasn't going to include it because of moderating concerns, but after later seeing my fellow students were limiting players to only three characters in their name, like on arcade machines, in order to alleviate this issue.</p>
