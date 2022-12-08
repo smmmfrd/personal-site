@@ -14,7 +14,7 @@ export default function Home() {
     <main className="lg:max-w-5xl w-11/12 mx-auto flex flex-col">
       <AboutMe />
       <h2 className="bg-blurredBg w-min pt-4 px-4 text-6xl rounded-t-xl z-10">Projects</h2>
-      <div className="bg-blurredBg pt-0 p-4 mb-8 rounded-xl rounded-tl-none
+      <div className="bg-blurredBg pt-0 sm:p-4 p-1 mb-8 rounded-xl rounded-tl-none
           grid lg:grid-cols-2 grid-cols-1">
         <Project
           projectName={"Rookie Drive"}

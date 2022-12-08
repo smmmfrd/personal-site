@@ -39,7 +39,7 @@ export default function Project({ projectName, projectDescription, technologies,
 
     return (
         <article className="bg-blurredBg drop-shadow-xl rounded-lg
-            py-2 px-3 lg:mx-3 my-4 flex flex-col">
+            py-2 sm:px-3 px-1 lg:mx-3 my-4 flex flex-col">
             <div className="py-2 flex-grow 
                 flex flex-col justify-between gap-4">
                 <header className="h-full cursor-pointer group bg-blurredBg pt-2 p-4 rounded-lg flex flex-col gap-2 my-auto relative"

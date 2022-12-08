@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 export default function Navbar() {
     const router = useRouter();
@@ -13,7 +12,7 @@ export default function Navbar() {
             <nav className="max-w-5xl mx-auto
                 flex justify-between">
                 <h1 className="text-2xl">Sam Mumford's Portfolio</h1>
-                {router.pathname !== '/' && <button onClick={handleClick}>Return to Home</button>}
+                {router.pathname !== '/' && <button onClick={handleClick}>Home</button>}
             </nav>
         </header>
     );

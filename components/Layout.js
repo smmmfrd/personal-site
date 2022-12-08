@@ -7,11 +7,12 @@ export default function Layout({ children }) {
     const returnToTopButton = useRef();
 
     useEffect(() => {
+        handleScroll();
         window.onscroll = function () { handleScroll() };
     }, []);
 
     function handleScroll() {
-        if(document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             returnToTopButton.current.style.display = 'block';
         } else {
             returnToTopButton.current.style.display = 'none';
