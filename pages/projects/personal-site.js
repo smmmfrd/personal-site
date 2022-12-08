@@ -1,4 +1,5 @@
 import * as ProjectPage from "../../components/ProjectPage";
+import personalSitePic from '../../public/project_pics/personal_site_projects.png';
 
 export default function PersonalSite() {
     return (
@@ -9,6 +10,10 @@ export default function PersonalSite() {
             />
             <ProjectPage.Section title={'Tech Used & Why'}>
                 <p>Next.js to generate a static site, using React as the templating language, is the first step to learning it. As I learn more with Next, this site will continue to improve.</p>
+                <ProjectPage.ProjectImage 
+                    img={personalSitePic}
+                    altText={'The Projects section of of my personal site.'}
+                />
             </ProjectPage.Section>
             <ProjectPage.Section title={'Problems'}>
                 <p>I couldn't find or figure out a way to convert what I write in plaintext on a document to go through an API into a truly dynamic site that updates when I write, but that's ok. Manually writing out each document allows me to make changes when I need to, like custom stylings or even interactive things.</p>

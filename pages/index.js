@@ -6,7 +6,7 @@ import Project from "../components/Project";
 import profilePic from '../public/pic-of-me-cropped.jpg';
 import rookieDrivePic from '../public/project_pics/rookie_drive_main.png';
 import battleShipPic from '../public/project_pics/battleship_game-end.png';
-
+import personalSitePic from '../public/project_pics/personal_site_projects.png';
 import wheresWaldoPic from '../public/project_pics/wheres_waldo_char-screen.png';
 
 export default function Home() {
@@ -43,7 +43,8 @@ export default function Home() {
           href={'personal-site'}
           githubLink={"https://github.com/smmmfrd/personal-site"}
           siteLink={"#"}
-          img={''}
+          img={personalSitePic}
+          altText={'The Projects section of my personal site.'}
         />
         <Project
           projectName={"Where's Waldo App"}
