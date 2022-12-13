@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 
-export default function Project({ projectName, projectDescription, technologies, href, githubLink, siteLink, img, altText }) {
+export default function ProjectCard({ projectName, projectDescription, technologies, href, githubLink, siteLink, img, altText }) {
 
     const router = useRouter();
 
@@ -73,7 +73,7 @@ export default function Project({ projectName, projectDescription, technologies,
                         <div className="w-max flex-none
                             flex flex-col justify-start items-end gap-2">
                             <LinkElement
-                                title={'To Github Repo'}
+                                title={'To Source Code'}
                                 link={githubLink}
                             />
                             <LinkElement

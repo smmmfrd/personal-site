@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Main({ children }) {
     return (
-        <main className="lg:max-w-4xl w-5/6 my-4 mx-auto rounded bg-blurredBg sm:p-6 p-1">
+        <main className="lg:max-w-4xl sm:w-5/6 w-full my-4 mx-auto rounded bg-blurredBg sm:p-6 p-1">
             {children}
         </main>
     )
