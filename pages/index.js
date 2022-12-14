@@ -34,7 +34,6 @@ export default function Home() {
   return (
     <main className="lg:max-w-5xl sm:w-11/12 w-full mx-auto flex flex-col gap-8">
       <AboutMe />
-      <ContactMe />
       <section>
         <h2 className="bg-blurredBg w-min pt-4 px-4 text-6xl rounded-t-xl z-10">Projects</h2>
         <div className="bg-blurredBg pt-0 sm:p-4 p-1 mb-8 rounded-xl rounded-tl-none
@@ -81,6 +80,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <ContactMe />
     </main>
   );
 }

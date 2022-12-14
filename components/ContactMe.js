@@ -2,7 +2,7 @@ export default function ContactMe() {
     return (
         <section className="sm:w-5/6 w-full rounded-2xl mx-auto p-8 bg-blurredBg">
             <h2 className="text-4xl mb-2">Contact Me</h2>
-            <form name="contact" method="POST" data-netlify="true"
+            <form name="contact" method="POST" data-netlify="true" action="/"
                 className="flex-grow flex flex-col gap-4">
                 {/* Netlify form stuff */}
                 <input type="hidden" name="form-name" value="contact" />
