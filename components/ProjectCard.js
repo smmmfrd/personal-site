@@ -51,7 +51,7 @@ export default function ProjectCard({ projectName, projectDescription, technolog
                         width='480'
                         height='288'
                     />
-                    <figcaption>
+                    <figcaption className="flex flex-col gap-2">
                         <h3 className="flex-none text-5xl text-center group-hover:underline">
                             {projectName}
                             <span className="text-4xl invisible group-hover:visible">&rarr;</span>

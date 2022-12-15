@@ -30,13 +30,34 @@ function AboutMe() {
   );
 }
 
+function ExtraStuffs() {
+  return (
+    <section className="sm:w-5/6 w-full rounded-2xl mx-auto py-4 px-8 bg-blurredBg">
+      <h2 className="text-3xl mb-2">Certifications</h2>
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-16 gap-2">
+        <a className="text-left bg-blurredBg py-2 px-6 rounded-xl hover:underline group" href="https://www.freecodecamp.org/fcc3ac490a1-bcd9-403e-853e-f6bd62977d3a" target="_blank" rel="noopener noreferrer">
+          <h3 className="text-2xl">FreeCodeCamp<span className="text-4xl invisible group-hover:visible">&rarr;</span></h3>
+          <p>Responsive Web Design</p>
+          <p>Javascript Algorithms and Data Structures</p>
+        </a>
+        <a className="text-right bg-blurredBg py-2 px-6 rounded-xl hover:underline group" href="https://university.mongodb.com/course_completion/bea8d98c-a8a3-4fe6-bc55-7c439d2d2577?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing" target="_blank" rel="noopener noreferrer">
+          <h3 className="text-2xl"><span className="text-4xl invisible group-hover:visible">&rarr;</span>MongoDB</h3>
+          <p>M001: MongoDB Basics</p>
+        </a>
+      </div>
+      <a href="Sam_Mumford_Resume.pdf" download
+        className="block w-fit mt-4 mx-auto text-2xl bg-blurredBg p-2 rounded-sm hover:underline hover:bg-foggedBg">Download My Resume!</a>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
-    <main className="lg:max-w-5xl sm:w-11/12 w-full mx-auto flex flex-col gap-8">
+    <main className="lg:max-w-5xl sm:w-11/12 w-full mx-auto my-4 flex flex-col gap-8">
       <AboutMe />
       <section>
         <h2 className="bg-blurredBg w-min pt-4 px-4 text-6xl rounded-t-xl z-10">Projects</h2>
-        <div className="bg-blurredBg pt-0 sm:p-4 p-1 mb-8 rounded-xl rounded-tl-none
+        <div className="bg-blurredBg pt-0 sm:p-4 p-1 rounded-xl rounded-tl-none
             grid lg:grid-cols-2 grid-cols-1">
           <ProjectCard
             projectName={"Rookie Drive"}
@@ -80,6 +101,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <ExtraStuffs />
       <ContactMe />
     </main>
   );
