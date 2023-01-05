@@ -39,10 +39,10 @@ export default function ProjectCard({ projectName, projectDescription, technolog
 
     return (
         <article className="bg-blurredBg drop-shadow-xl rounded-lg
-            py-2 sm:px-3 px-1 lg:mx-3 my-4 flex flex-col">
+            py-2 sm:px-1 px-1 lg:mx-3 my-4 flex flex-col">
             <div className="py-2 flex-grow 
                 flex flex-col justify-between gap-4">
-                <header className="h-full cursor-pointer group bg-blurredBg pt-2 p-4 rounded-lg flex flex-col gap-2 my-auto relative"
+                <header className="h-full cursor-pointer group pt-2 p-4 rounded-lg flex flex-col gap-2 my-auto relative"
                     onClick={() => router.push(`/projects/${href}`)}>
                     <Image
                         className="mx-auto rounded-lg"
@@ -63,7 +63,8 @@ export default function ProjectCard({ projectName, projectDescription, technolog
                         </p>
                     </figcaption>
                 </header>
-                <div className="bg-blurredBg py-2 px-4 rounded-lg">
+                {/* TECH & LINKS */}
+                <div className=" py-2 px-8 rounded-lg">
                     <h4 className="text-2xl mb-2">Technologies</h4>
                     <div className="flex gap-4">
                         <div className="w-full
