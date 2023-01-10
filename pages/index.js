@@ -6,12 +6,6 @@ import Image from "next/image";
 
 import SocialLinks from "../components/SocialLinks";
 import ProjectCard from "../components/ProjectCard";
-
-import profilePic from '../public/pic-of-me-cropped.jpg';
-import rookieDrivePic from '../public/project_pics/rookie_drive_main.png';
-import battleShipPic from '../public/project_pics/battleship_game-end.png';
-import personalSitePic from '../public/project_pics/personal_site_projects.png';
-import wheresWaldoPic from '../public/project_pics/wheres_waldo_char-screen.png';
 import ContactMe from "../components/ContactMe";
 
 // async function getProjects() {
@@ -43,15 +37,17 @@ export async function getStaticProps() {
 }
 
 export default function Home({ mainPage }) {
-  useEffect(() => {
-    console.log(mainPage);
-  }, []);
-
   return (
     <main className="lg:max-w-5xl sm:w-11/12 w-full mx-auto my-4 flex flex-col gap-8">
-      <AboutMe />
+      <AboutMe 
+        personalImage={mainPage.personalImage}
+        personalIntro={mainPage.personalIntro}
+        personalResume={mainPage.personalResume}
+        personalGithubLink={mainPage.personalGithubLink}
+        personalLinkedinLink={mainPage.personalLinkedinLink}
+      />
       <section>
-        <h2 className="bg-blurredBg w-min pt-4 px-4 text-6xl rounded-t-xl z-10">Featured Projects</h2>
+        <h2 className="bg-blurredBg sm:w-max w-min pt-4 px-4 text-6xl rounded-t-xl z-10">Featured Projects</h2>
         <div className="bg-blurredBg pt-0 sm:p-4 p-1 rounded-xl rounded-tl-none
             grid lg:grid-cols-2 grid-cols-1">
           {mainPage.featuredProjects.map((project) => <ProjectCard
@@ -66,34 +62,37 @@ export default function Home({ mainPage }) {
           />)}
         </div>
       </section>
-      <ExtraStuffs />
+      <ExtraStuffs personalResume={mainPage.personalResume}/>
       <ContactMe />
     </main>
   );
 }
 
-function AboutMe() {
+function AboutMe({ personalImage, personalIntro, personalGithubLink, personalLinkedinLink }) {
 
   return (
-    <header className="w-11/12 mx-auto px-8 py-4 bg-blurredBg rounded-3xl
-        flex gap-8 items-center">
+    <header className="w-11/12 mx-auto px-8 py-4 bg-blurredBg rounded-3xl flex gap-8 items-center">
       <div>
         <div className="float-left w-64 h-64 mr-4 relative shadow-2xl rounded-lg overflow-hidden">
           <Image
-            src={profilePic}
+            loader={() => personalImage}
             alt="Picture of me"
+            width="256"
+            height="256"
           />
         </div>
         <h2 className="text-5xl my-2">About Me</h2>
-        <p className="my-2">I have a typical backstory of a game programmer who discovers web development and learns to enjoy web development a lot more. The Odin Project, Scrimba, and FreeCodeCamp have been instrumental for taking what I learned at college to make games and applying those principles to web development.</p>
-        <p className="my-2">I have a personal passion for accessibility, simple & fast designs, and love for making things.</p>
-        <SocialLinks />
+        <p className="my-2">{personalIntro}</p>
+        <SocialLinks
+          linkedInLink={personalLinkedinLink}
+          githubLink={personalGithubLink}
+        />
       </div>
     </header>
   );
 }
 
-function ExtraStuffs() {
+function ExtraStuffs({ personalResume }) {
   return (
     <section className="sm:w-5/6 w-full rounded-2xl mx-auto">
       <h2 className="bg-blurredBg w-max pt-4 px-4 text-4xl rounded-t-xl z-10">Certifications & Resume</h2>
@@ -110,7 +109,7 @@ function ExtraStuffs() {
           <p>M001: MongoDB Basics</p>
         </a>
       </div>
-      <a href="Sam_Mumford_Resume.pdf" download
+      <a href={personalResume} download
         className="block w-fit mt-4 mx-auto text-2xl bg-blurredBg p-2 rounded-sm hover:underline hover:bg-foggedBg">Download My Resume!</a>
     </section>
   );
