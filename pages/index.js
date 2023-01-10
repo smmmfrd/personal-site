@@ -1,29 +1,10 @@
-import { useEffect } from "react";
-
 import { db } from "../firebase";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import Image from "next/image";
 
 import SocialLinks from "../components/SocialLinks";
 import ProjectCard from "../components/ProjectCard";
 import ContactMe from "../components/ContactMe";
-
-// async function getProjects() {
-//   const projectColRef = collection(db, "projects");
-//   const projectSnapshot = await getDocs(projectColRef);
-
-//   let docs = [];
-//   projectSnapshot.docs.forEach(doc => {
-//     let data = doc.data();
-//     docs.push({
-//       ...data.header,
-//       title: data.title,
-//       id: doc.id
-//     })
-//   });
-
-//   return docs;
-// }
 
 export async function getStaticProps() {
   const mainPageDocRef = doc(db, "main page", "main");
