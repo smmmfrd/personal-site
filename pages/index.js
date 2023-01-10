@@ -30,7 +30,6 @@ export async function getStaticProps() {
   const mainPageDocSnapshot = await getDoc(mainPageDocRef);
 
   let mainPage = mainPageDocSnapshot.data();
-  console.log(mainPage)
   return {
     props: {  mainPage }
   }
@@ -51,6 +50,7 @@ export default function Home({ mainPage }) {
         <div className="bg-blurredBg pt-0 sm:p-4 p-1 rounded-xl rounded-tl-none
             grid lg:grid-cols-2 grid-cols-1">
           {mainPage.featuredProjects.map((project) => <ProjectCard
+            key={project.id}
             projectName={project.title}
             projectDescription={project.intro}
             technologies={project.techUsed}
@@ -75,7 +75,8 @@ function AboutMe({ personalImage, personalIntro, personalGithubLink, personalLin
       <div>
         <div className="float-left w-64 h-64 mr-4 relative shadow-2xl rounded-lg overflow-hidden">
           <Image
-            loader={() => personalImage}
+            src={personalImage}
+            // loader={() => personalImage}
             alt="Picture of me"
             width="256"
             height="256"
