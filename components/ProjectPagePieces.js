@@ -35,7 +35,7 @@ export function ProjectImage({ img, altText }) {
                 src={img}
                 alt={altText}
                 width='480'
-                height='288'
+                height='270'
             />
         </div>
     );
