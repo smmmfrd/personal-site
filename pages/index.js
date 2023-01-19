@@ -21,6 +21,7 @@ export default function Home({ mainPage }) {
     <main className="lg:max-w-5xl sm:w-11/12 w-full mx-auto my-4 flex flex-col gap-8">
       <AboutMe
         personalImage={mainPage.personalImage}
+        personalTitle={mainPage.personalTitle}
         personalIntro={mainPage.personalIntro}
         personalResume={mainPage.personalResume}
         personalGithubLink={mainPage.personalGithubLink}
@@ -51,7 +52,7 @@ export default function Home({ mainPage }) {
   );
 }
 
-function AboutMe({ personalImage, personalIntro, personalGithubLink, personalLinkedinLink }) {
+function AboutMe({ personalImage, personalTitle, personalIntro, personalGithubLink, personalLinkedinLink }) {
 
   return (
     <header className="w-11/12 mx-auto px-8 py-4 bg-blurredBg rounded-3xl flex gap-8 items-center">
@@ -59,14 +60,16 @@ function AboutMe({ personalImage, personalIntro, personalGithubLink, personalLin
         <div className="float-left w-64 h-64 mr-4 relative shadow-2xl rounded-lg overflow-hidden">
           <Image
             src={personalImage}
-            // loader={() => personalImage}
             alt="Picture of me"
             width="256"
             height="256"
           />
         </div>
         <h2 className="text-5xl my-2">About Me</h2>
-        <p className="my-2">{personalIntro}</p>
+        <div className="text-neutral-100">
+          <p className="text-3xl">{personalTitle}</p>
+          <p className="my-2">{personalIntro}</p>
+        </div>
         <SocialLinks
           linkedInLink={personalLinkedinLink}
           githubLink={personalGithubLink}
