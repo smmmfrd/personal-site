@@ -12,14 +12,14 @@ export async function getStaticProps() {
 
   let mainPage = mainPageDocSnapshot.data();
   return {
-    props: {  mainPage }
+    props: { mainPage }
   }
 }
 
 export default function Home({ mainPage }) {
   return (
     <main className="lg:max-w-5xl sm:w-11/12 w-full mx-auto my-4 flex flex-col gap-8">
-      <AboutMe 
+      <AboutMe
         personalImage={mainPage.personalImage}
         personalIntro={mainPage.personalIntro}
         personalResume={mainPage.personalResume}
@@ -28,22 +28,24 @@ export default function Home({ mainPage }) {
       />
       <section>
         <h2 className="bg-blurredBg sm:w-max w-min pt-4 px-4 text-6xl rounded-t-xl z-10">Featured Projects</h2>
-        <div className="bg-blurredBg pt-0 sm:p-4 p-1 rounded-xl rounded-tl-none
-            grid lg:grid-cols-2 grid-cols-1">
-          {mainPage.featuredProjects.map((project) => <ProjectCard
-            key={project.id}
-            projectName={project.title}
-            projectDescription={project.intro}
-            technologies={project.techUsed}
-            href={`${project.id}`}
-            githubLink={project.githubLink}
-            siteLink={project.liveLink}
-            img={project.image}
-            altText={''}
-          />)}
+        <div className="bg-blurredBg pt-0 sm:p-4 p-1 rounded-xl rounded-tl-none">
+            {/* grid lg:grid-cols-2 grid-cols-1"> */}
+          {mainPage.featuredProjects.map((project) =>
+            <ProjectCard
+              key={project.id}
+              projectName={project.title}
+              projectDescription={project.intro}
+              technologies={project.techUsed}
+              href={`${project.id}`}
+              githubLink={project.githubLink}
+              siteLink={project.liveLink}
+              img={project.image}
+              altText={''}
+            />
+          )}
         </div>
       </section>
-      <ExtraStuffs personalResume={mainPage.personalResume}/>
+      <ExtraStuffs personalResume={mainPage.personalResume} />
       <ContactMe />
     </main>
   );
@@ -92,7 +94,7 @@ function ExtraStuffs({ personalResume }) {
         </a>
       </div>
       <a href={personalResume} download
-        className="block w-fit mt-4 mx-auto text-2xl bg-blurredBg p-2 rounded-sm hover:underline hover:bg-foggedBg">Download My Resume!</a>
+        className="block w-fit mt-4 mx-auto text-4xl bg-blurredBg p-2 rounded-sm hover:underline hover:bg-foggedBg">Download My Resume!</a>
     </section>
   );
 }

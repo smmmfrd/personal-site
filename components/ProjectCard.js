@@ -42,17 +42,18 @@ export default function ProjectCard({ projectName, projectDescription, technolog
             py-2 sm:px-1 px-1 lg:mx-3 my-4 flex flex-col">
             <div className="py-2 flex-grow 
                 flex flex-col justify-between gap-4">
-                <header className="h-full cursor-pointer group pt-2 p-4 rounded-lg flex flex-col gap-2 my-auto relative"
+                <header className="h-full cursor-pointer group pt-2 p-4 rounded-lg flex md:flex-row md:justify-between flex-col gap-2 my-auto relative"
                     onClick={() => router.push(`/projects/${href}`)}>
                     <Image
-                        className="mx-auto rounded-lg"
+                        className="md:m-0 mx-auto rounded-lg"
+                        style={{width: "480px", height: "270px"}}
                         src={img}
                         alt={altText}
                         width='480'
-                        height='288'
+                        height='270'
                     />
-                    <figcaption className="flex flex-col gap-2">
-                        <h3 className="flex-none text-5xl text-center group-hover:underline">
+                    <figcaption className="flex flex-col gap-2 md:text-right">
+                        <h3 className="flex-none text-5xl md:text-right text-center group-hover:underline">
                             {projectName}
                             <span className="text-4xl invisible group-hover:visible">&rarr;</span>
                         </h3>
