@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 export default function Navbar() {
     const router = useRouter();
 
-    function handleClick() {
-        router.push('/');
+    function handleClick(path) {
+        router.push(`/${path}`);
     }
 
     return (
@@ -12,7 +12,11 @@ export default function Navbar() {
             <nav className="max-w-5xl mx-auto
                 flex justify-between">
                 <h1 className="text-2xl">Sam Mumford's Portfolio</h1>
-                {router.pathname !== '/' && <button onClick={handleClick}>Home</button>}
+                <div className="flex gap-4">
+                    {router.pathname !== '/' && <button onClick={() => handleClick('')}>Home</button>}
+                    <button onClick={() => handleClick('#contact')}>Contact Me</button>
+                    <button onClick={() => handleClick('#resume')}>Resume</button>
+                </div>
             </nav>
         </header>
     );

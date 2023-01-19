@@ -78,7 +78,7 @@ function AboutMe({ personalImage, personalIntro, personalGithubLink, personalLin
 
 function ExtraStuffs({ personalResume }) {
   return (
-    <section className="sm:w-5/6 w-full rounded-2xl mx-auto">
+    <section id="resume" className="sm:w-5/6 w-full rounded-2xl mx-auto">
       <h2 className="bg-blurredBg w-max pt-4 px-4 text-4xl rounded-t-xl z-10">Certifications & Resume</h2>
       <div className="bg-blurredBg p-8 grid lg:grid-cols-2 grid-cols-1 lg:gap-16 gap-2">
         <a className="text-left bg-blurredBg py-2 px-6 rounded-xl hover:underline group w-max mr-auto" href="https://www.freecodecamp.org/fcc3ac490a1-bcd9-403e-853e-f6bd62977d3a" target="_blank" rel="noopener noreferrer">
