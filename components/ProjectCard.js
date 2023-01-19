@@ -97,7 +97,7 @@ function LinkElement({ title, link }) {
     }
 
     return (
-        <a className="pl-2 p-1 font-semibold bg-black rounded text-right flex cursor-pointer" onClick={handleClick}>
+        <a className="pl-2 p-1 font-semibold bg-black rounded text-right flex cursor-pointer border border-black hover:border-slate-100 active:text-neutral-400" onClick={handleClick}>
             {title} <BsArrowRightShort className="inline-block align-middle text-2xl" />
         </a>
     )

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 export function Main({ children }) {
@@ -11,6 +12,10 @@ export function Main({ children }) {
 export function Hero({ title, description }) {
     return (
         <header className="px-8 mb-8">
+            <Head>
+                <title>Sam Mumford's Portfolio - {title}</title>
+                <meta name="description" content={`Sam Mumford's Portfolio, Page for ${title}`}/>
+            </Head>
             <h1 className="text-4xl my-2">{title}</h1>
             <p className="">{description}</p>
         </header>
