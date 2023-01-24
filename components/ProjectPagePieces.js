@@ -13,7 +13,7 @@ export function Hero({ title, description }) {
     return (
         <header className="px-8 mb-8">
             <Head>
-                <title>Sam Mumford's Portfolio - {title}</title>
+                <title>{`${title} | Sam Mumford's Portfolio`}</title>
                 <meta name="description" content={`Sam Mumford's Portfolio, Page for ${title}`}/>
             </Head>
             <h1 className="text-4xl my-2">{title}</h1>
