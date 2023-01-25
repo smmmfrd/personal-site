@@ -65,7 +65,7 @@ function AboutMe({ personalImage, personalTitle, personalIntro, personalGithubLi
             height="256"
           />
         </div>
-        <h2 className="text-5xl my-2">About Me</h2>
+        <h2 className="text-5xl my-2">Sam Mumford</h2>
         <div className="text-neutral-100">
           <p className="text-3xl">{personalTitle}</p>
           <p className="my-2">{personalIntro}</p>
