@@ -15,8 +15,8 @@ async function normalProps() {
     const mainPageDocSnapshot = await getDoc(mainPageDocRef);
 
     let mainPage = mainPageDocSnapshot.data();
-    const mainPageJSON = JSON.stringify(mainPage);
-    fs.writeFileSync('data/main_page.json', mainPageJSON);
+    // const mainPageJSON = JSON.stringify(mainPage);
+    // fs.writeFileSync('data/main_page.json', mainPageJSON);
 
     return {
         props: { mainPage }

@@ -3,10 +3,14 @@ import * as ProjectPagePieces from "../../components/ProjectPagePieces";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 
-export async function getStaticPaths() {
+// Saving data
+import fs from 'fs';
+import project_data from "../../data/projects.json";
+
+async function normalPaths() {
     const projectColRef = collection(db, "projects");
     const projectSnapshot = await getDocs(projectColRef);
-
+    
     let paths = [];
     projectSnapshot.docs.forEach(doc => {
         paths.push({
@@ -15,6 +19,23 @@ export async function getStaticPaths() {
             }
         })
     });
+    
+    // const docsData = projectSnapshot.docs.map(doc => doc.data());
+    // const projectsJSON = JSON.stringify(docsData);
+    // fs.writeFileSync('data/projects.json', projectsJSON);
+    
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+async function readPaths() {
+    let paths = project_data.map(project => ({
+        params: {
+            id: project.id
+        }
+    }));
 
     return {
         paths,
@@ -22,7 +43,11 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps(context) {
+export async function getStaticPaths() {
+    return readPaths();
+}
+
+async function normalProps(context) {
     const id = context.params.id;
     const docRef = doc(db, "projects", id);
     const docSnap = await getDoc(docRef);
@@ -31,6 +56,18 @@ export async function getStaticProps(context) {
     return {
         props: { project: data }
     }
+}
+
+async function readProps(context) {
+    const id = context.params.id;
+    const project = project_data.find(project => project.id === id);
+    return {
+        props: {project}
+    }
+}
+
+export async function getStaticProps(context) {
+    return readProps(context);
 }
 
 export default function ProjectPage({ project }) {

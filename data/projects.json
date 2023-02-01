@@ -1,0 +1,195 @@
+[
+    {
+        "title": "Where's Waldo",
+        "techUsed": [],
+        "problems": [],
+        "header": {
+            "techUsed": [],
+            "intro": "",
+            "githubLink": "",
+            "image": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/GqYeTMemudbz2mZsL0St%2Fwheres_waldo_char-screen.jpg?alt=media&token=b168d068-8dd7-41be-a7a3-6a4eeaefce38",
+            "liveLink": ""
+        },
+        "futurePlans": [],
+        "id": "GqYeTMemudbz2mZsL0St",
+        "storyBehind": []
+    },
+    {
+        "problems": [
+            {
+                "key": "1673653425216",
+                "text": "Making models for the website data. In making the first version of the website I already knew about the structure of the project pages. But as I would start implementing some syncing features, I would realize there was so many little, and big, things I had completely forgotten about, from the \"tech used\" section to the landing page itself."
+            },
+            {
+                "alt": "The editor app showing me editing the data for this site",
+                "key": "1673904556611",
+                "url": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/L1YQn2IVDmJtOrk6x8qi%2Fsite-builder_text.png?alt=media&token=ccf4ebcc-3cba-4134-9332-3f49f1774601"
+            },
+            {
+                "text": "Images. Man, does Next.js have an Image component. To get images into the body of project documents was easy enough, just a different data type. Uploading the images, making a modal for selecting them, and then getting Next itself to actually fetch the images' urls was a journey.",
+                "key": "1673898310576"
+            }
+        ],
+        "id": "L1YQn2IVDmJtOrk6x8qi",
+        "storyBehind": [
+            {
+                "key": "1673652123174",
+                "text": "Everyone needs a personal site when they start putting themselves out there, and I am no different. This first started as a site where I would copy-paste text I wrote in another program into values, a truly static site and not utilizing any of the amazing features Next.js has."
+            },
+            {
+                "key": "1673897723928",
+                "text": "Learning more I experimented with fetching data from a Firebase database, and eventually made a blogging app that could update a database that Next.js would fetch from to build my personal site. The blogging app itself is very much for my eyes only, it looks ugly and only my email can write to the database itself."
+            },
+            {
+                "alt": "An early version of my personal site.",
+                "url": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/L1YQn2IVDmJtOrk6x8qi%2Fpersonal_site_projects.jpg?alt=media&token=14ab2ce4-6a9d-41fa-b935-662156851147",
+                "key": "1673758134262"
+            }
+        ],
+        "futurePlans": [
+            {
+                "key": "1673653498201",
+                "text": "The project editor itself is not ready to be shown off, and no one can use it anyways since the Firebase Database only allows my email to read and write data to it. However, I will definitely be making with a public version at a later point in time."
+            }
+        ],
+        "title": "Personal Site",
+        "techUsed": [
+            {
+                "text": "Hearing the phrase \"Use React as a templating language\" after using Pug for an Odin Project assignment, I knew I had to use Next.js immediately.",
+                "key": "1673652182110"
+            },
+            {
+                "text": "I have gotten so used to Tailwind at this point that it's probably time to stop and start with the CSS modules Next has. Firebase is also my favorite BaaS and I won't be giving it up for my backend anytime soon.",
+                "key": "1673898014076"
+            }
+        ],
+        "header": {
+            "githubLink": "https://github.com/smmmfrd/personal-site",
+            "intro": "A statically rendered site built from a Firebase database, that has it's own editing app.",
+            "liveLink": "https://courageous-froyo-e3669b.netlify.app/",
+            "image": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/L1YQn2IVDmJtOrk6x8qi%2Fpersonal_site_projects.jpg?alt=media&token=14ab2ce4-6a9d-41fa-b935-662156851147",
+            "techUsed": [
+                "react",
+                "firebase",
+                "tailwind",
+                "vite",
+                "next"
+            ]
+        }
+    },
+    {
+        "storyBehind": [
+            {
+                "key": "1674595817811",
+                "text": "The first project in The Odin Project to actually give me some pause creating Battleship in just plain javascript, especially since I have a degree in Game Development and had never recreated a board game. Then I found out about the real stopping point, which is the algorithm for placing enemy ships. But after one walk with my dog I came up with a solution, and I kept thinking of new ways to improve it while learning React from Scrimba. So I implemented those improvements, and I just keep thinking of more, even writing this now."
+            }
+        ],
+        "futurePlans": [
+            {
+                "text": "Images for the battleships themselves would be a great thing, so that they're all not just grey blobs. Other visual improvements need to be made, but I would need more help to do so, and since this is just some weirdo's personal project and not official in anyway I'm apprehensive to make this project look any more official.",
+                "key": "1674597018299"
+            },
+            {
+                "text": "Definitely adding in more options to the menu. (I have added one since this picture was taken, to change the delay between turns, making them faster or slower)",
+                "key": "1674596963999"
+            },
+            {
+                "key": "1674597152938",
+                "url": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/ZYFRJvS3jeukahoQ99Qi%2Fbattleship_main.jpg?alt=media&token=c0ffee60-a155-418f-b11c-a516b9a9af94",
+                "alt": "The settings for my Battleship app, also the landing page"
+            }
+        ],
+        "id": "ZYFRJvS3jeukahoQ99Qi",
+        "title": "Battleship",
+        "header": {
+            "image": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/ZYFRJvS3jeukahoQ99Qi%2Fbattleship_game-end.jpg?alt=media&token=5356497c-ceae-4a05-ab76-ed32a757759b",
+            "techUsed": [
+                "react",
+                "tailwind",
+                "react-router",
+                "vite"
+            ],
+            "intro": "A recreation of the classic game. After completing the project in vanilla javascript, I had to redo it in React.",
+            "githubLink": "https://github.com/smmmfrd/battleship-react",
+            "liveLink": "https://velvety-moxie-6a1467.netlify.app/"
+        },
+        "techUsed": [
+            {
+                "text": "React caught my attention because of how similar it is to how I structure my code for games, and is the main reason I chose to change professions. While it is great for making reactive websites, it definitely pales in comparison to Unity or Godot when it comes to making games.",
+                "key": "1674596061045"
+            },
+            {
+                "alt": "The middle of a game of Battleship in my app.",
+                "url": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/ZYFRJvS3jeukahoQ99Qi%2Fbattleship_gameplay.jpg?alt=media&token=36631264-a2fe-4229-af73-61da70a8a370",
+                "key": "1674596476246"
+            },
+            {
+                "key": "1674596236847",
+                "text": "Tailwind CSS allows me to keep using the CSS knowledge I've accumulated while also not allowing me to having full control over things like colors, and is a perfect fit for my workflow. While it does create very ugly looking components in code and I still love working with it, but sometimes I do wish for some of the benefits of regular CSS, then I get a flexbox or sticky working in a minute and forget about that."
+            }
+        ],
+        "problems": [
+            {
+                "key": "1674596520546",
+                "text": "Displaying ships is easily the worst part of this project. In the original version I had the grid squares themselves change to show ships, and getting them to connect to one another by having them go over the grid's gap was not a fun challenge. In this current version they are positioned absolutely above their grid space."
+            },
+            {
+                "key": "1674596835615",
+                "text": "Building the player's board was also a challenge, in vanilla javascript it is difficult to have an element moving around to wherever the user hovers, rotating, and changing shape while they make their decisions. However in React all you need is a ref and you're off to the races. I also managed to find a few other Odin Project submissions that still had a certain bug that I was able to squish when it came to making the player board. The bug is if the user places a ship in a valid position next to another ship, then rotates the placer, you need to revalidate the position (as I did in the image below), but some students didn't catch this!"
+            },
+            {
+                "key": "1674597166253",
+                "alt": "Player board creation in my Battleship app",
+                "url": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/ZYFRJvS3jeukahoQ99Qi%2Fbattleship_player_board.jpg?alt=media&token=c4d4f1bc-dc6e-4cf2-9d32-c0a4091c5a49"
+            }
+        ]
+    },
+    {
+        "storyBehind": [
+            {
+                "key": "1673904965777",
+                "text": "While working in game development, Google Drive was an indispensable tool, and I chose it for the final assignment for The Odin Project, to recreate a killer feature or MVP of a website we used a lot."
+            },
+            {
+                "alt": "The landing page of Rookie Drive, with examples of all the document types.",
+                "key": "1673905317009",
+                "url": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/eKXmSnXzm2op3RERRVs6%2Frookie_drive_main.jpg?alt=media&token=4475e74b-71da-4b1d-914e-3683f8e383a5"
+            },
+            {
+                "text": "However, it's not feasible for me to basically recreate the microsoft office suite, live updates from other users, sharing, and a full file storage system. So I decided to utilize what I've been doing the previous months and convert those documents editors I had been making, like notes, to do lists, random draw from a list, and a meme generator, into the documents the users can create. ",
+                "key": "1673905120276"
+            }
+        ],
+        "futurePlans": [
+            {
+                "text": "This project is the culmination of all my learning in React and Firebase with no more room to grow. The only things to do would be to make the code easier to read, and by extension utilizing more of the react-firebase-hooks package, of which I'm only using the auth one currently. In other projects, like this site's editor, I have used them more frequently and it's been great. Styling could also use an overhaul, but I'm proud of it for now.",
+                "key": "1674162195235"
+            }
+        ],
+        "id": "eKXmSnXzm2op3RERRVs6",
+        "problems": [
+            {
+                "text": "While taking user input and displaying it was a simple task for me at this point with React, I got really worried because of even while testing, my database writes would reach the hundreds rather quickly. To avoid this I implemented a manual save button, and while this could cause frustration with users the first time not seeing it, I made sure the button itself jumps out as much as possible.",
+                "key": "1673905639227"
+            }
+        ],
+        "header": {
+            "intro": "A recreation of my most used website, google drive, but the only document types are ones people learning to program make! All user authorization and database storage is handled by Firebase.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/personal-site-33513.appspot.com/o/eKXmSnXzm2op3RERRVs6%2Frookie_drive_main.jpg?alt=media&token=4475e74b-71da-4b1d-914e-3683f8e383a5",
+            "techUsed": [
+                "react",
+                "firebase",
+                "webpack"
+            ],
+            "githubLink": "https://github.com/smmmfrd/rookie-drive",
+            "liveLink": "https://aesthetic-crisp-943a41.netlify.app/"
+        },
+        "techUsed": [
+            {
+                "key": "1673905381993",
+                "text": "With my second project involving Firebase I wanted users to create, read, update, and even delete their own documents. Firebase also has a robust authorization and file storage system that I really fell in love with while working on this project, and continued to use to make this site!"
+            }
+        ],
+        "title": "Rookie Drive"
+    }
+]
