@@ -61,7 +61,7 @@ export default function Home({ mainPage }) {
                             githubLink={project.githubLink}
                             siteLink={project.liveLink}
                             img={project.image}
-                            altText={''}
+                            altText={`${project.title}'s introduction`}
                         />
                     )}
                 </div>

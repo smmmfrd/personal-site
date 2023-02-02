@@ -3,8 +3,9 @@ import { useEffect, useRef } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-export default function Layout({ children }) {
+const SPACE_FROM_TOP = 500;
 
+export default function Layout({ children }) {
     const returnToTopButton = useRef();
 
     useEffect(() => {
@@ -13,7 +14,7 @@ export default function Layout({ children }) {
     }, []);
 
     function handleScroll() {
-        if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        if(document.body.scrollTop > SPACE_FROM_TOP || document.documentElement.scrollTop > SPACE_FROM_TOP) {
             returnToTopButton.current.style.display = 'block';
         } else {
             returnToTopButton.current.style.display = 'none';
@@ -26,8 +27,7 @@ export default function Layout({ children }) {
     }
 
     return (
-        <div className="relative min-h-screen text-neutral-50
-        bg-gradient-to-b from-cyan-500 to-blue-500">
+        <div className="relative min-h-screen text-neutral-50 bg-cool-gray">
             <Head>
                 <title>Sam Mumford's Portfolio</title>
                 <meta name="author" content="Sam Mumford"/>
