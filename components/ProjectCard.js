@@ -13,78 +13,70 @@ export default function ProjectCard({ projectName, projectDescription, technolog
     function findElement(techName) {
         switch (techName) {
             case "react":
-                return <RiReactjsLine />;
+                return <RiReactjsLine title="React" />;
             case "firebase":
-                return <TbBrandFirebase />;
+                return <TbBrandFirebase title="Firebase" />;
             case "react-router":
-                return <SiReactrouter />;
+                return <SiReactrouter title="React Router" />;
             case "webpack":
-                return <SiWebpack />;
+                return <SiWebpack title="Webpack" />;
             case "tailwind":
-                return <SiTailwindcss />;
+                return <SiTailwindcss title="Tailwind" />;
             case "vite":
-                return <SiVite />;
+                return <SiVite title="Vite" />;
             case "next":
-                return <SiNextdotjs />;
+                return <SiNextdotjs title="Next js" />;
             default:
                 return;
         }
     }
 
     const techElements = technologies.map(tech => {
-        return <div className="px-1 bg-black flex-none text-lg border-2 rounded-sm 
-            flex items-center gap-1" key={tech}>
-            {findElement(tech)} {tech}</div>
+        return <div className="flex-none text-lg flex items-center gap-1" key={tech}>
+            {findElement(tech)}</div>
     });
 
     return (
-        <article className="bg-blurredBg drop-shadow-xl rounded-lg
-            py-2 sm:px-1 px-1 lg:mx-3 my-4 flex flex-col">
-            <div className="py-2 flex-grow 
-                flex flex-col justify-between gap-4">
-                <header className="h-full cursor-pointer group pt-2 p-4 rounded-lg flex md:flex-row md:justify-between flex-col gap-2 my-auto relative"
-                    onClick={() => router.push(`/projects/${href}`)}>
-                    <Image
-                        className="md:m-0 mx-auto rounded-lg"
-                        style={{width: "480px", height: "270px"}}
-                        src={img}
-                        alt={altText}
-                        width='480'
-                        height='270'
-                    />
-                    <figcaption className="flex flex-col gap-2 md:text-right md:justify-center">
-                        <h3 className="flex-none text-5xl md:text-right text-center group-hover:underline">
-                            {projectName}
-                            <span className="text-4xl invisible group-hover:visible">&rarr;</span>
-                        </h3>
-                        <p className="px-4">
-                            {projectDescription}
-                            <span className="text-neutral-300 inline-block lg:block ml-2 lg:m-0"> Click to here learn more...
-                            </span>
-                        </p>
-                    </figcaption>
-                </header>
-                {/* TECH & LINKS */}
-                <div className=" py-2 px-8 rounded-lg">
-                    <h4 className="text-2xl mb-2">Technologies</h4>
-                    <div className="flex gap-4">
-                        <div className="w-full
-                            flex flex-wrap content-start items-start gap-0.5">
-                            {techElements}
-                        </div>
-                        <div className="w-max flex-none
-                            flex flex-col justify-start items-end gap-2">
-                            <LinkElement
-                                title={'To Source Code'}
-                                link={githubLink}
-                            />
-                            <LinkElement
-                                title={'To Live Site'}
-                                link={siteLink}
-                            />
+        <article className="group/item cursor-pointer" onClick={() => router.push(`/projects/${href}`)}>
+
+            <div className="flex gap-2">
+                <Image
+                    className="m-auto rounded-lg"
+                    style={{ width: "320px", height: "180px" }}
+                    src={img}
+                    alt={altText}
+                    width='320'
+                    height='180'
+                />
+                <figcaption className="flex flex-col gap-0.5 md:justify-center">
+                    <h3 className="flex-none mb-1 text-2xl font-semibold group-hover/item:underline">
+                        {projectName}
+                        <span className="text-xl invisible group-hover/item:visible"> &rarr;</span>
+                    </h3>
+                    <p className="">
+                        {projectDescription}
+                        {/* <span className="text-neutral-300 inline-block lg:block ml-2 lg:m-0"> Click to here learn more...
+                        </span> */}
+                    </p>
+                    <div className="flex items-center gap-2">
+                        <h4 className="text-lg">Technologies</h4>
+                        <div className="flex gap-4">
+                            <div className="w-full flex flex-wrap content-start items-start gap-0.5">
+                                {techElements}
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div className="inline-block">
+                        <LinkElement
+                            title={'Source Code'}
+                            link={githubLink}
+                        />
+                        <LinkElement
+                            title={'Live Site'}
+                            link={siteLink}
+                        />
+                    </div>
+                </figcaption>
             </div>
         </article>
     );
@@ -97,7 +89,7 @@ function LinkElement({ title, link }) {
     }
 
     return (
-        <a className="pl-2 p-1 font-semibold bg-black rounded text-right flex cursor-pointer border border-black hover:border-slate-100 active:text-neutral-400" onClick={handleClick}>
+        <a className="group/link w-max pl-2 p-1 font-semibold bg-black rounded flex cursor-pointer border border-black hover:border-slate-100 active:text-neutral-400" onClick={handleClick}>
             {title} <BsArrowRightShort className="inline-block align-middle text-2xl" />
         </a>
     )

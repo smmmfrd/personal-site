@@ -38,7 +38,7 @@ export async function getStaticProps() {
 
 export default function Home({ mainPage }) {
     return (
-        <main className="lg:max-w-5xl sm:w-11/12 w-full mx-auto my-4 flex flex-col gap-8">
+        <main className="w-full mx-auto flex flex-col gap-8 pb-16">
             <AboutMe
                 personalImage={mainPage.personalImage}
                 personalTitle={mainPage.personalTitle}
@@ -48,8 +48,8 @@ export default function Home({ mainPage }) {
                 personalLinkedinLink={mainPage.personalLinkedinLink}
             />
             <section>
-                <h2 className="bg-blurredBg sm:w-max w-min pt-4 px-4 text-6xl rounded-t-xl z-10">Featured Projects</h2>
-                <div className="bg-blurredBg pt-0 sm:p-4 p-1 rounded-xl rounded-tl-none">
+                <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
+                <div className="flex flex-col gap-4">
                     {/* grid lg:grid-cols-2 grid-cols-1"> */}
                     {mainPage.featuredProjects.map((project) =>
                         <ProjectCard
@@ -66,16 +66,15 @@ export default function Home({ mainPage }) {
                     )}
                 </div>
             </section>
-            <ExtraStuffs personalResume={mainPage.personalResume} />
-            <ContactMe />
+            {/* <ExtraStuffs personalResume={mainPage.personalResume} />
+            <ContactMe /> */}
         </main>
     );
 }
 
 function AboutMe({ personalImage, personalTitle, personalIntro, personalGithubLink, personalLinkedinLink }) {
-
     return (
-        <header className="w-11/12 mx-auto px-8 py-4 bg-blurredBg rounded-3xl flex gap-8 items-center">
+        <header className="mx-auto bg-blurredBg rounded-3xl flex gap-8 items-center">
             <div>
                 <div className="float-left w-64 h-64 mr-4 relative shadow-2xl rounded-lg overflow-hidden">
                     <Image

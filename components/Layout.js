@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const SPACE_FROM_TOP = 500;
+const SPACE_FROM_TOP = 300;
 
 export default function Layout({ children }) {
     const returnToTopButton = useRef();
@@ -27,9 +27,9 @@ export default function Layout({ children }) {
     }
 
     return (
-        <div className="relative min-h-screen text-neutral-50 bg-cool-gray">
+        <div className="min-w-full min-h-screen text-neutral-50 bg-cool-gray [&>*]:max-w-2xl">
             <Head>
-                <title>Sam Mumford's Portfolio</title>
+                <title>Sam Mumford - Front End Web Developer</title>
                 <meta name="author" content="Sam Mumford"/>
                 <meta name="description" content="Sam Mumford's Portfolio Home Page"/>
                 <meta name="keywords" content="Portfolio" />
