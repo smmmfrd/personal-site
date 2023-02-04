@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Main({ children }) {
     return (
-        <main className="lg:max-w-4xl sm:w-5/6 w-full my-4 mx-auto rounded bg-blurredBg sm:p-6 p-1">
+        <main className="w-full my-4 mx-auto">
             {children}
         </main>
     )
@@ -11,7 +11,7 @@ export function Main({ children }) {
 
 export function Hero({ title, description }) {
     return (
-        <header className="px-8 mb-8">
+        <header className="mb-8">
             <Head>
                 <title>{`${title} | Sam Mumford's Portfolio`}</title>
                 <meta name="description" content={`Sam Mumford's Portfolio, Page for ${title}`}/>
@@ -24,8 +24,7 @@ export function Hero({ title, description }) {
 
 export function Section({ title, children }) {
     return (
-        <section className="bg-blurredBg w-full p-6 lg:pr-4 first-of-type:rounded-t last:rounded-b
-        flex flex-col gap-3">
+        <section className="flex flex-col gap-3">
             <h3 className="text-3xl">{title}</h3>
             {children}
         </section>

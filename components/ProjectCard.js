@@ -38,6 +38,10 @@ export default function ProjectCard({ projectName, projectDescription, technolog
 
     return (
         <article className="group/item cursor-pointer" onClick={() => router.push(`/projects/${href}`)}>
+            <h3 className="flex-none mb-0.5 text-2xl font-semibold group-hover/item:underline">
+                {projectName}
+                <span className="text-xl invisible group-hover/item:visible"> &rarr;</span>
+            </h3>
 
             <div className="flex gap-2">
                 <Image
@@ -49,10 +53,6 @@ export default function ProjectCard({ projectName, projectDescription, technolog
                     height='180'
                 />
                 <figcaption className="flex flex-col gap-0.5 md:justify-center">
-                    <h3 className="flex-none mb-1 text-2xl font-semibold group-hover/item:underline">
-                        {projectName}
-                        <span className="text-xl invisible group-hover/item:visible"> &rarr;</span>
-                    </h3>
                     <p className="">
                         {projectDescription}
                         {/* <span className="text-neutral-300 inline-block lg:block ml-2 lg:m-0"> Click to here learn more...
@@ -66,7 +66,7 @@ export default function ProjectCard({ projectName, projectDescription, technolog
                             </div>
                         </div>
                     </div>
-                    <div className="inline-block">
+                    <div className="flex gap-2">
                         <LinkElement
                             title={'Source Code'}
                             link={githubLink}
