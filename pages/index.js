@@ -72,27 +72,7 @@ export default function Home({ mainPage }) {
 
 function AboutMe({ personalImage, personalTitle, personalIntro, personalGithubLink, personalLinkedinLink }) {
     return (
-        <header className="mx-auto bg-blurredBg rounded-3xl flex gap-8 items-center">
-            <div>
-                <div className="float-left w-64 h-64 mr-4 relative shadow-2xl rounded-lg overflow-hidden">
-                    <Image
-                        src={personalImage}
-                        alt="Picture of me"
-                        width="256"
-                        height="256"
-                    />
-                </div>
-                <h2 className="text-5xl my-2">Sam Mumford</h2>
-                <div className="text-neutral-100">
-                    <p className="text-3xl">{personalTitle}</p>
-                    <p className="my-2">{personalIntro}</p>
-                </div>
-                <SocialLinks
-                    linkedInLink={personalLinkedinLink}
-                    githubLink={personalGithubLink}
-                />
-            </div>
-        </header>
+        <h2>Under Construction</h2>
     );
 }
 

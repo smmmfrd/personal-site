@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'cool-gray': 'rgb(31, 41, 55)'
+        'cool-gray': 'rgb(15, 23, 42)'
         // 'blurredBg': 'rgba(0, 0, 0, 0.125)',
         // 'foggedBg': 'rgba(0, 0, 0, 0.175)'
       }
