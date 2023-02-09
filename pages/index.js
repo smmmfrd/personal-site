@@ -25,8 +25,6 @@ async function normalProps() {
 
 async function readProps() {
     const data = main_page;
-    console.log('----- HERE: -----')
-    console.log(data.personalImage);
     return {
         props: { mainPage: data }
     }

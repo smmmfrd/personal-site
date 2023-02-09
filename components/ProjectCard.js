@@ -38,7 +38,7 @@ export default function ProjectCard({ projectName, projectDescription, technolog
 
     return (
         <article className="group/item cursor-pointer" onClick={() => router.push(`/projects/${href}`)}>
-            <h3 className="flex-none mb-0.5 text-2xl font-semibold group-hover/item:underline">
+            <h3 className="flex-none mb-0.5 text-3xl font-semibold group-hover/item:underline">
                 {projectName}
                 <span className="text-xl invisible group-hover/item:visible"> &rarr;</span>
             </h3>
@@ -52,7 +52,7 @@ export default function ProjectCard({ projectName, projectDescription, technolog
                     width='320'
                     height='180'
                 />
-                <figcaption className="flex flex-col gap-0.5 md:justify-center">
+                <figcaption className="p-2 flex flex-col gap-1 md:justify-center">
                     <p className="">
                         {projectDescription}
                         {/* <span className="text-neutral-300 inline-block lg:block ml-2 lg:m-0"> Click to here learn more...

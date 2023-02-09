@@ -13,8 +13,10 @@ export default function Navbar() {
                 <h1 className="text-2xl">Sam Mumford</h1>
                 <div className="flex gap-4">
                     {router.pathname !== '/' && <button onClick={() => handleClick('')}>Home</button>}
-                    <button onClick={() => handleClick('#contact')}>Contact Me</button>
+                    {router.pathname !== '/projects' && <button onClick={() => handleClick('projects')}>Projects</button>}
+                    {/* <button onClick={() => handleClick('#contact')}>Contact Me</button>
                     <button onClick={() => handleClick('#resume')}>Resume</button>
+                    <button>&equiv;</button> */}
                 </div>
             </nav>
         </header>

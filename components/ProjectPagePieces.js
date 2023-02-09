@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Main({ children }) {
     return (
-        <main className="w-full my-4 mx-auto">
+        <main className="w-[576px] my-4 mx-auto">
             {children}
         </main>
     )
@@ -24,7 +24,7 @@ export function Hero({ title, description }) {
 
 export function Section({ title, children }) {
     return (
-        <section className="flex flex-col gap-3">
+        <section className="flex flex-col gap-3 mt-4">
             <h3 className="text-3xl">{title}</h3>
             {children}
         </section>
