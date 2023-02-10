@@ -9,6 +9,7 @@ import ContactMe from "../components/ContactMe";
 // Saving data
 import fs from 'fs';
 import main_page from "../data/main_page.json";
+import HomeHero from "../components/HomeHero";
 
 async function normalProps() {
     const mainPageDocRef = doc(db, "main page", "main");
@@ -37,14 +38,10 @@ export async function getStaticProps() {
 export default function Home({ mainPage }) {
     return (
         <main className="w-full mx-auto flex flex-col gap-8 pb-16">
-            <AboutMe
-                personalImage={mainPage.personalImage}
-                personalTitle={mainPage.personalTitle}
-                personalIntro={mainPage.personalIntro}
-                personalResume={mainPage.personalResume}
-                personalGithubLink={mainPage.personalGithubLink}
-                personalLinkedinLink={mainPage.personalLinkedinLink}
+            <HomeHero 
+
             />
+            <hr />
             <section>
                 <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
                 <div className="flex flex-col gap-4">
@@ -67,12 +64,6 @@ export default function Home({ mainPage }) {
             {/* <ExtraStuffs personalResume={mainPage.personalResume} />
             <ContactMe /> */}
         </main>
-    );
-}
-
-function AboutMe({ personalImage, personalTitle, personalIntro, personalGithubLink, personalLinkedinLink }) {
-    return (
-        <h2>Under Construction</h2>
     );
 }
 
