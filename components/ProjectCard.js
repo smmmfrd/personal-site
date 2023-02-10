@@ -37,8 +37,8 @@ export default function ProjectCard({ projectName, projectDescription, technolog
     });
 
     return (
-        <article className="group/item cursor-pointer" onClick={() => router.push(`/projects/${href}`)}>
-            <h3 className="flex-none mb-0.5 text-3xl font-semibold group-hover/item:underline">
+        <article className="">
+            <h3 onClick={() => router.push(`/projects/${href}`)} className="flex-none mb-2 text-3xl font-semibold group/item cursor-pointer hover:underline">
                 {projectName}
                 <span className="text-xl invisible group-hover/item:visible"> &rarr;</span>
             </h3>
@@ -89,7 +89,7 @@ function LinkElement({ title, link }) {
     }
 
     return (
-        <a className="group/link w-max pl-2 p-1 font-semibold bg-black rounded flex cursor-pointer border border-black hover:border-slate-100 active:text-neutral-400" onClick={handleClick}>
+        <a className="w-max pl-2 p-1 font-semibold rounded flex cursor-pointer border border-slate-100 hover:underline active:text-neutral-400" onClick={handleClick}>
             {title} <BsArrowRightShort className="inline-block align-middle text-2xl" />
         </a>
     )
