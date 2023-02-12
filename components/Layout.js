@@ -35,7 +35,7 @@ export default function Layout({ children }) {
                 <meta name="keywords" content="Portfolio" />
                 <link rel="shortcut icon" href="/open-arm-fill.svg" sizes="any" type="image/svg+xml" />
             </Head>
-            <button ref={returnToTopButton} onClick={handleTop} className="pt-1 pb-2 px-3 bg-black border-2 border-slate-100 rounded fixed bottom-5 right-5 z-20 text-2xl">&uarr;</button>
+            <button ref={returnToTopButton} onClick={handleTop} className="pt-1 pb-2 px-3 text-cool-gray bg-slate-100 rounded fixed bottom-5 right-5 z-20 text-2xl">&uarr;</button>
             <Navbar />
             {children}
             <Footer />

@@ -9,7 +9,6 @@ import ContactMe from "../components/ContactMe";
 // Saving data
 import fs from 'fs';
 import main_page from "../data/main_page.json";
-import HomeHero from "../components/HomeHero";
 
 async function normalProps() {
     const mainPageDocRef = doc(db, "main page", "main");
@@ -38,9 +37,22 @@ export async function getStaticProps() {
 export default function Home({ mainPage }) {
     return (
         <main className="w-full mx-auto flex flex-col gap-8 pb-16">
-            <HomeHero 
-
-            />
+            <figure className="mt-4 flex gap-10">
+                <Image
+                    className="h-min my-auto rounded-full ring ring-slate-400"
+                    src={mainPage.personalImage}
+                    alt="Picture of me"
+                    width="128"
+                    height="128"
+                />
+                <figcaption className="flex flex-col gap-0.5">
+                    <h2 className="mt-4 text-xl font-bold">Hi I'm Sam, A front-end engineer focussed on accessibility, ease-of-use, functionality, and style.</h2>
+                    <SocialLinks
+                        linkedInLink={mainPage.personalLinkedinLink}
+                        githubLink={mainPage.personalGithubLink}
+                    />
+                </figcaption>
+            </figure>
             <hr />
             <section>
                 <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
