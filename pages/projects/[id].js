@@ -75,8 +75,11 @@ export default function ProjectPage({ project }) {
         <ProjectPagePieces.Main>
             <ProjectPagePieces.Hero
                 title={project.title}
-                description={project.header.intro}
-                technologies={project.header.techUsed}
+                {...project.header}
+                // description={project.header.intro}
+                // technologies={project.header.techUsed}
+                // githubLink={project.header.githubLink}
+                // liveLink={project.header.liveLink}
             />
             <ProjectPagePieces.Section title={'Story Behind'}>
                 {project.storyBehind.map(BuildPiece)}

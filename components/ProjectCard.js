@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-import { BsArrowRightShort } from "react-icons/bs";
 import Technologies from "./Technologies";
+import ProjectLink from "./ProjectLink";
 
 export default function ProjectCard({ projectName, projectDescription, technologies, href, githubLink, siteLink, img, altText }) {
 
@@ -32,14 +32,14 @@ export default function ProjectCard({ projectName, projectDescription, technolog
                     </p>
                     <div className="flex items-center gap-2">
                         <h4 className="text-lg">Technologies</h4>
-                        <Technologies techUsed={technologies} showNames={false}/>
+                        <Technologies techUsed={technologies} showNames={false} />
                     </div>
                     <div className="flex gap-2">
-                        <LinkElement
+                        <ProjectLink
                             title={'Source Code'}
                             link={githubLink}
                         />
-                        <LinkElement
+                        <ProjectLink
                             title={'Live Site'}
                             link={siteLink}
                         />
@@ -48,17 +48,4 @@ export default function ProjectCard({ projectName, projectDescription, technolog
             </div>
         </article>
     );
-}
-
-function LinkElement({ title, link }) {
-    const handleClick = (e) => {
-        e.stopPropagation();
-        window.open(link, '_blank').focus();
-    }
-
-    return (
-        <a className="w-max pl-2 p-1 font-semibold rounded flex cursor-pointer border border-slate-100 hover:underline active:text-neutral-400" onClick={handleClick}>
-            {title} <BsArrowRightShort className="inline-block align-middle text-2xl" />
-        </a>
-    )
 }

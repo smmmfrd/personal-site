@@ -53,7 +53,7 @@ export default function Home({ mainPage }) {
                     />
                 </figcaption>
             </figure>
-            <hr />
+            {/* <hr /> */}
             <section>
                 <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
                 <div className="flex flex-col gap-4">
@@ -68,7 +68,7 @@ export default function Home({ mainPage }) {
                             githubLink={project.githubLink}
                             siteLink={project.liveLink}
                             img={project.image}
-                            altText={`${project.title}'s introduction`}
+                            altText={`${project.title}`}
                         />
                     )}
                 </div>
