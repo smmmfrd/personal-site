@@ -3,7 +3,7 @@ import { TbBrandFirebase } from "react-icons/tb";
 import { SiReactrouter, SiWebpack, SiTailwindcss, SiVite, SiNextdotjs } from "react-icons/si";
 
 export default function Technologies({ techUsed, showNames }) {
-    function findElement(techName) {
+    function findElementImage(techName) {
         switch (techName) {
             case "react":
                 return <RiReactjsLine title="React" />;
@@ -24,16 +24,21 @@ export default function Technologies({ techUsed, showNames }) {
         }
     }
 
-    const techElements = techUsed.map(tech => {
-        return <div className="flex-none text-lg flex items-center gap-1" key={tech}>
-            {findElement(tech)}</div>
-    });
+    function techWithName(techName) {
+        return (
+            <>{findElementImage(techName)} {techName.charAt(0).toUpperCase() + techName.slice(1)}</>
+        );
+    }
+
+    const techElements = techUsed.map(tech =>
+        <div className={`${showNames ? "text-2xl" : "text-lg"} flex items-center gap-1`} key={tech}>
+            {showNames ? techWithName(tech) : findElementImage(tech)}
+        </div>
+    );
 
     return (
-        <div className="flex gap-4">
-            <div className="w-full flex flex-wrap content-start items-start gap-0.5">
-                {techElements}
-            </div>
+        <div className={`w-full flex flex-wrap content-start items-start ${showNames ? "gap-4" : "gap-0.5"}`}>
+            {techElements}
         </div>
     );
 }
