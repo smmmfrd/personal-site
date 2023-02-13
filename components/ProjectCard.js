@@ -24,7 +24,7 @@ export default function ProjectCard({ projectName, projectDescription, technolog
                     width='320'
                     height='180'
                 />
-                <figcaption className="p-2 flex flex-col gap-1 md:justify-center">
+                <figcaption className="p-2 flex flex-col gap-1">
                     <p className="">
                         {projectDescription}
                         {/* <span className="text-neutral-300 inline-block lg:block ml-2 lg:m-0"> Click to here learn more...
