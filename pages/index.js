@@ -39,7 +39,7 @@ export default function Home({ mainPage }) {
         <main className="w-full mx-auto flex flex-col gap-8 pb-16">
             <figure className="mt-4 flex gap-10">
                 <Image
-                    className="h-min my-auto rounded-full ring ring-slate-400"
+                    className="h-min my-auto rounded-full ring ring-neutral-50"
                     src={mainPage.personalImage}
                     alt="Picture of me"
                     width="128"

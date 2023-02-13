@@ -1,40 +1,12 @@
-import { BsArrowRightShort } from "react-icons/bs";
-import { RiReactjsLine } from "react-icons/ri";
-import { TbBrandFirebase } from "react-icons/tb";
-import { SiReactrouter, SiWebpack, SiTailwindcss, SiVite, SiNextdotjs } from "react-icons/si";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
+import { BsArrowRightShort } from "react-icons/bs";
+import Technologies from "./Technologies";
 
 export default function ProjectCard({ projectName, projectDescription, technologies, href, githubLink, siteLink, img, altText }) {
 
     const router = useRouter();
-
-    function findElement(techName) {
-        switch (techName) {
-            case "react":
-                return <RiReactjsLine title="React" />;
-            case "firebase":
-                return <TbBrandFirebase title="Firebase" />;
-            case "react-router":
-                return <SiReactrouter title="React Router" />;
-            case "webpack":
-                return <SiWebpack title="Webpack" />;
-            case "tailwind":
-                return <SiTailwindcss title="Tailwind" />;
-            case "vite":
-                return <SiVite title="Vite" />;
-            case "next":
-                return <SiNextdotjs title="Next js" />;
-            default:
-                return;
-        }
-    }
-
-    const techElements = technologies.map(tech => {
-        return <div className="flex-none text-lg flex items-center gap-1" key={tech}>
-            {findElement(tech)}</div>
-    });
 
     return (
         <article className="">
@@ -60,11 +32,7 @@ export default function ProjectCard({ projectName, projectDescription, technolog
                     </p>
                     <div className="flex items-center gap-2">
                         <h4 className="text-lg">Technologies</h4>
-                        <div className="flex gap-4">
-                            <div className="w-full flex flex-wrap content-start items-start gap-0.5">
-                                {techElements}
-                            </div>
-                        </div>
+                        <Technologies techUsed={technologies} showNames={false}/>
                     </div>
                     <div className="flex gap-2">
                         <LinkElement

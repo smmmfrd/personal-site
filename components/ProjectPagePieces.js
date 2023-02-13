@@ -9,7 +9,7 @@ export function Main({ children }) {
     )
 }
 
-export function Hero({ title, description }) {
+export function Hero({ title, description, technologies }) {
     return (
         <header className="mb-8">
             <Head>
@@ -18,6 +18,7 @@ export function Hero({ title, description }) {
             </Head>
             <h1 className="text-4xl my-2">{title}</h1>
             <p className="">{description}</p>
+            {technologies.map((tech) => <p>{tech}</p>)}
         </header>
     )
 }

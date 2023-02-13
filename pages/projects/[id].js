@@ -76,6 +76,7 @@ export default function ProjectPage({ project }) {
             <ProjectPagePieces.Hero
                 title={project.title}
                 description={project.header.intro}
+                technologies={project.header.techUsed}
             />
             <ProjectPagePieces.Section title={'Story Behind'}>
                 {project.storyBehind.map(BuildPiece)}
