@@ -1,9 +1,22 @@
+import { db } from "../../firebase";
+import { doc, getDoc } from "firebase/firestore";
 import ProjectCard from "../../components/ProjectCard";
 import main_page from "../../data/main_page.json";
 
-export function getStaticProps() {
+export async function getStaticProps() {
+    // return {
+    //     props: { projects: main_page.featuredProjects }
+    // }
+
+    const mainPageDocRef = doc(db, "main page", "main");
+    const mainPageDocSnapshot = await getDoc(mainPageDocRef);
+
+    let mainPage = mainPageDocSnapshot.data();
+    // const mainPageJSON = JSON.stringify(mainPage);
+    // fs.writeFileSync('data/main_page.json', mainPageJSON);
+
     return {
-        props: { projects: main_page.featuredProjects }
+        props: { mainPage }
     }
 }
 
