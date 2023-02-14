@@ -16,14 +16,14 @@ export async function getStaticProps() {
     // fs.writeFileSync('data/main_page.json', mainPageJSON);
 
     return {
-        props: { mainPage }
+        props: { projects: mainPage.featuredProjects }
     }
 }
 
 export default function Projects({ projects }) {
     return (
         <main className="w-full mx-auto flex flex-col gap-8 pb-16">
-            <h2 className="text-3xl underline font-bold">Projects</h2>
+            <h2 className="text-5xl font-bold">Projects</h2>
             {projects.map((project) =>
                 <ProjectCard
                     key={project.id}

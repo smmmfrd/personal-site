@@ -18,7 +18,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function AboutPage({ data: mainPage }) {
+export default function AboutPage({ mainPage }) {
     return (
         <main className="w-full mx-auto flex flex-col gap-8 pb-16">
             <header className="mx-auto bg-blurredBg rounded-3xl flex gap-8 items-center">
