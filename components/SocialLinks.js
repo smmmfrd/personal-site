@@ -2,7 +2,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function SocialLinks({ linkedInLink, githubLink }) {
     return (
-        <div className="flex gap-6 p-2 items-center text-lg">
+        <div className={`p-2 text-lg flex gap-6 items-center sm:justify-start justify-center`}>
             <Link link={linkedInLink}>
                 <BsLinkedin /> Linkedin
             </Link>

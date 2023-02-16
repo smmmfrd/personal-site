@@ -37,7 +37,7 @@ export async function getStaticProps() {
 export default function Home({ mainPage }) {
     return (
         <main className="w-full mx-auto flex flex-col gap-8 pb-16">
-            <figure className="mt-4 flex gap-10">
+            <figure className="mt-4 flex sm:flex-row flex-col items-center gap-10">
                 <Image
                     className="h-min my-auto rounded-full ring ring-neutral-50"
                     src={mainPage.personalImage}
@@ -45,7 +45,7 @@ export default function Home({ mainPage }) {
                     width="128"
                     height="128"
                 />
-                <figcaption className="flex flex-col gap-0.5">
+                <figcaption className="flex sm:flex-col sm:text-left text-center flex-col-reverse gap-0.5">
                     <h2 className="mt-4 text-xl font-bold">Hi I'm Sam, A front-end engineer focussed on accessibility, ease-of-use, functionality, and style.</h2>
                     <SocialLinks
                         linkedInLink={mainPage.personalLinkedinLink}

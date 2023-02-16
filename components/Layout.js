@@ -27,7 +27,7 @@ export default function Layout({ children }) {
     }
 
     return (
-        <div className="min-w-full min-h-screen text-neutral-50 bg-cool-gray [&>*]:max-w-2xl md:p-0 px-4">
+        <div className="w-full text-neutral-50 bg-cool-gray [&>*]:max-w-2xl md:p-0 px-4">
             <Head>
                 <title>Sam Mumford - Front End Web Developer</title>
                 <meta name="author" content="Sam Mumford" />
