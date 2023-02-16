@@ -15,7 +15,7 @@ export default function ProjectCard({ projectName, projectDescription, technolog
                 <span className="text-xl invisible group-hover/item:visible"> &rarr;</span>
             </h3>
 
-            <div className="flex gap-2">
+            <div className="flex sm:flex-row flex-col gap-2">
                 <Image
                     className="m-auto rounded-lg"
                     style={{ width: "320px", height: "180px" }}
