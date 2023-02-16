@@ -5,7 +5,7 @@ import Technologies from "./Technologies";
 
 export function Main({ children }) {
     return (
-        <main className="w-[576px] my-4 mx-auto">
+        <main className="max-w-[576px] my-4 mx-auto">
             {children}
         </main>
     )
