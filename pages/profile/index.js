@@ -4,18 +4,29 @@ import Image from "next/image";
 import SocialLinks from "../../components/SocialLinks";
 import main_page from "../../data/main_page.json";
 
-export async function getStaticProps() {
+async function normalProps() {
     const mainPageDocRef = doc(db, "main page", "main");
     const mainPageDocSnapshot = await getDoc(mainPageDocRef);
 
     let mainPage = mainPageDocSnapshot.data();
     delete mainPage.featuredProjects
-    // const mainPageJSON = JSON.stringify(mainPage);
-    // fs.writeFileSync('data/main_page.json', mainPageJSON);
 
     return {
         props: { mainPage }
     }
+}
+
+async function readProps() {
+    let mainPage = main_page;
+    delete mainPage.featuredProjects
+
+    return {
+        props: { mainPage }
+    }
+}
+
+export async function getStaticProps() {
+    return readProps();
 }
 
 export default function AboutPage({ mainPage }) {

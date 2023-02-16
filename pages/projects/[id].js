@@ -44,7 +44,7 @@ async function readPaths() {
 }
 
 export async function getStaticPaths() {
-    return normalPaths();
+    return readPaths();
 }
 
 async function normalProps(context) {
@@ -67,7 +67,7 @@ async function readProps(context) {
 }
 
 export async function getStaticProps(context) {
-    return normalProps(context);
+    return readProps(context);
 }
 
 export default function ProjectPage({ project }) {

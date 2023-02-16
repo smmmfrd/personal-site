@@ -31,7 +31,7 @@ async function readProps() {
 }
 
 export async function getStaticProps() {
-    return normalProps();
+    return readProps();
 }
 
 export default function Home({ mainPage }) {
